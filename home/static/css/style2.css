@@ -1,0 +1,39 @@
+{% load staticfiles %}
+body {
+   overflow-y:auto;
+
+}
+
+h1 {color: red;
+    font-family: Ubuntu, sans-serif;
+ }
+h2 {color: #e8bf5d;}
+
+.top-header {
+    background: url('../image/l4.png') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+    min-height: 940px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #fff;
+@media (max-width: 960px){
+    .top-header {height: 450px;}
+}
+@media (max-width: 768px){
+    .top-header {height: 100px;}
+}
+}
+
+
+.top-header1{
+    background: url('../image/l5.png') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+    min-height: 940px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #fff;
+}

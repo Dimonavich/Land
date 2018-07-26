@@ -1,0 +1,28 @@
+{% extends 'home/wrapper.html' %}
+{% load staticfiles %}
+{% block hed %}
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+
+{% endblock %}
+{% block content %}
+
+<section class="d-flex justify-content-between top-header">
+
+    <div class="container" style="background-color: rgba(0, 0, 0, 0.6)";>
+        <div class="row" style="padding: 10px;">
+        {% for imgs in IMG %}
+               <div class="col-md-4">
+                   <h6>{{ imgs.Imagenes_name }}</h6>
+                   <a data-fancybox="gallery" href="{{imgs.Imagenes_url}}" </a>
+                       <img src="{{imgs.Imagenes_url}}"class="img-fluid rounded">
+
+                    </a>
+
+               </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}

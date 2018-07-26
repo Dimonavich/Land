@@ -1,0 +1,28 @@
+{% extends 'home/wrapper.html' %}
+{% block content %}
+{% load staticfiles %}
+
+<section class="d-flex justify-content-between top-header">
+    <div class="container" style="background-color: rgba(0, 0, 0, 0.6);">
+        <div class="row" style="padding: 15px;">
+        {% for vid in Video %}
+
+
+
+            <div class="col-md-4">
+                <div class="container" style="background-color: rgba(0, 0, 0, 0.8); padding: 10px; display: block">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src={{vid.Video_url}} frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <h4><a href="/Video/get/{{ vid.id }}">{{ vid.Video_name }}</a></h4>
+                    <h6>{{ vid.Video_o }}</h6>
+                    <span class="badge badge-warning">Дата добавления: {{ vid.Video_data }}</span>
+                    <span class="badge badge-danger">Likes:  {{ vid.Video_likes }}</span>
+
+                </div>
+            </div>
+
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}
